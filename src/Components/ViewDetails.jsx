@@ -2,9 +2,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "./Localstorage";
 
 const ViewDetails = () => {
     const handleApplyAllBtn = ()=>{
+      saveJobApplication(jobsId)
         toast("You have Apply Successful!");
 
     }
